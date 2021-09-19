@@ -31,8 +31,14 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
+        auth: {
+          htaccess: {
+            username: `cvtt`,
+            password: `cvtt123`,
+          }
+        },
         url:
-        process.env.WPGRAPHQL_URL || `http://cakeit.cvtt.com.br/graphql`,
+        `https://cakeit.cvtt.com.br/graphql`,
       },
     },
     `gatsby-plugin-styled-components`,
