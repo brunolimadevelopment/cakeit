@@ -31,6 +31,12 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
+        auth: {
+          htaccess: {
+            username: process.env.HTTPBASICAUTH_USERNAME,
+            password: process.env.HTTPBASICAUTH_PASSWORD,
+          }
+        },
         url: `https://cakeit.cvtt.com.br/graphql`,
       },
     },
