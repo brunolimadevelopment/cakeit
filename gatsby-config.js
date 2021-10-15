@@ -31,9 +31,20 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url:
-        `https://cakeit.cvtt.com.br/graphql`,
+        url: `https://cakeit.cvtt.com.br/graphql`,
+        protocol: `https`,
+        includedRoutes: [
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/categories",
+          "**/tags",
+          "**/taxonomies",
+          // "**/users", // uncomment this and watch the warning above reappear!
+          "**/menus",
+        ],
       },
+      
     },
     `gatsby-plugin-styled-components`,
     {
